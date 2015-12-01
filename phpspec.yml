@@ -1,0 +1,5 @@
+suites:
+    main:
+        namespace: JoshGoodson
+        psr4_prefix: JoshGoodson
+        src_path: app
