@@ -1,0 +1,31 @@
+machine:
+  php:
+    version: 5.6.14
+  timezone:
+    America/Chicago
+  environment:
+    ENVIRONMENT: testing
+    DB_HOST: 127.0.0.1
+    DB_DATABASE: circle_test
+    DB_USERNAME: ubuntu
+
+dependencies:
+  pre:
+    - echo "memory_limit = 1024M" > ~/.phpenv/versions/$(phpenv global)/etc/conf.d/memory.ini
+    - echo "export ENVIRONMENT=$ENVIRONMENT" >> /etc/apache2/envvars
+    - echo "export DB_HOST=$DB_HOST" >> /etc/apache2/envvars
+    - echo "export DB_DATABASE=$DB_DATABASE" >> /etc/apache2/envvars
+    - echo "export DB_USERNAME=$DB_USERNAME" >> /etc/apache2/envvars
+  post:
+    - gulp
+    - php artisan migrate --env=$ENVIRONMENT
+    - php artisan db:seed --env=$ENVIRONMENT
+    - cp .env.example .env
+    - php artisan key:generate
+    - sudo touch storage/logs/laravel.log
+    - sudo chown -R www-data:www-data storage
+    - sudo chmod -R 777 storage
+    - sudo a2enmod rewrite
+    - cp apache.conf /etc/apache2/sites-available
+    - a2ensite apache.conf
+    - sudo service apache2 restart
