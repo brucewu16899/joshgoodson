@@ -1,17 +1,13 @@
 <?php
 
 // Welcome
-Route::get('/', function () {
-    return view('welcome');
-})->middleware('guest');
-
-Route::get('/admin', function () {
-    return view('admin');
-})->middleware('guest');
-
-Route::get('/blog', function () {
-    return view('blog');
-})->middleware('guest');
+Route::get('/', function () { return view('welcome'); });
+// Admin template
+Route::get('/admin', function () { return view('admin'); });
+// Blog listing
+Route::get('/blog', function () { return view('blog'); });
+// About
+Route::get('/about', function () { return view('about'); });
 
 // Task routes...
 Route::get('/tasks', 'TaskController@index');
