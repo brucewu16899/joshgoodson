@@ -1,11 +1,11 @@
-@extends('layouts.layout')
+@extends('layouts.page')
 
 @section('content')
 <section class="page-title">
 		<div class="container">
 				<div class="row">
 						<div class="col-md-12">
-								<h4 class="text-uppercase">Welcome</h4>
+								<h4 class="text-uppercase">josh goodson</h4>
 								<ol class="breadcrumb">
 										<li><a href="#">Home</a></li>
 										<li class="active">Welcome</li>

@@ -14,23 +14,23 @@
   <title>Josh Goodson - Admin</title>
 
   <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
-  <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/bootstrap-3.3.5.min.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/uniform.default.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/bootstrap-3.3.5.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/uniform.default.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
   <!-- PAGE PLUGIN STYLES -->
-  <link href="css/admin/bootstrap-daterangepicker.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/jqvmap.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/bootstrap-daterangepicker.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/fullcalendar.min.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/jqvmap.css" rel="stylesheet" type="text/css"/>
   <!-- PAGE STYLES -->
-  <link href="css/admin/pages/tasks.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/pages/tasks.css" rel="stylesheet" type="text/css"/>
   <!-- THEME STYLES -->
-  <link href="css/admin/theme/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/theme/plugins-md.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/theme/layout.css" rel="stylesheet" type="text/css"/>
-  <link href="css/admin/theme/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
-  <link href="css/admin/theme/custom.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/theme/components-md.css" id="style_components" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/theme/plugins-md.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/theme/layout.css" rel="stylesheet" type="text/css"/>
+  <link href="/css/admin/theme/darkblue.css" rel="stylesheet" type="text/css" id="style_color"/>
+  <link href="/css/admin/theme/custom.css" rel="stylesheet" type="text/css"/>
 
   <link rel="shortcut icon" href="favicon.ico"/>
 </head>
@@ -4087,51 +4087,51 @@
 <script src="../../assets/global/plugins/respond.min.js"></script>
 <script src="../../assets/global/plugins/excanvas.min.js"></script>
 <![endif]-->
-<script src="js/admin/jquery.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery-migrate.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery-migrate.min.js" type="text/javascript"></script>
 <!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
-<script src="js/admin/jquery-ui.min.js" type="text/javascript"></script>
-<script src="js/admin/bootstrap-3.3.5.min.js" type="text/javascript"></script>
-<script src="js/admin/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.slimscroll.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.blockui.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.cokie.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.uniform.min.js" type="text/javascript"></script>
-<script src="js/admin/bootstrap-switch.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/js/admin/bootstrap-3.3.5.min.js" type="text/javascript"></script>
+<script src="/js/admin/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.slimscroll.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.blockui.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.cokie.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.uniform.min.js" type="text/javascript"></script>
+<script src="/js/admin/bootstrap-switch.min.js" type="text/javascript"></script>
 <!-- END CORE PLUGINS -->
 <!-- BEGIN PAGE LEVEL PLUGINS -->
-<script src="js/admin/jquery.vmap.js" type="text/javascript"></script>
-<script src="js/admin/maps/jquery.vmap.russia.js" type="text/javascript"></script>
-<script src="js/admin/maps/jquery.vmap.world.js" type="text/javascript"></script>
-<script src="js/admin/maps/jquery.vmap.europe.js" type="text/javascript"></script>
-<script src="js/admin/maps/jquery.vmap.germany.js" type="text/javascript"></script>
-<script src="js/admin/maps/jquery.vmap.usa.js" type="text/javascript"></script>
-<script src="js/admin/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
-<script src="js/admin/jquery.flot.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.flot.resize.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.flot.categories.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.pulsate.min.js" type="text/javascript"></script>
-<script src="js/admin/moment.min.js" type="text/javascript"></script>
-<script src="js/admin/bootstrap-daterangepicker.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.vmap.js" type="text/javascript"></script>
+<script src="/js/admin/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+<script src="/js/admin/maps/jquery.vmap.world.js" type="text/javascript"></script>
+<script src="/js/admin/maps/jquery.vmap.europe.js" type="text/javascript"></script>
+<script src="/js/admin/maps/jquery.vmap.germany.js" type="text/javascript"></script>
+<script src="/js/admin/maps/jquery.vmap.usa.js" type="text/javascript"></script>
+<script src="/js/admin/data/jquery.vmap.sampledata.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.flot.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.flot.resize.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.flot.categories.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.pulsate.min.js" type="text/javascript"></script>
+<script src="/js/admin/moment.min.js" type="text/javascript"></script>
+<script src="/js/admin/bootstrap-daterangepicker.js" type="text/javascript"></script>
 <!-- IMPORTANT! fullcalendar depends on jquery-ui.min.js for drag & drop support -->
-<script src="js/admin/fullcalendar.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.easypiechart.min.js" type="text/javascript"></script>
-<script src="js/admin/jquery.sparkline.min.js" type="text/javascript"></script>
+<script src="/js/admin/fullcalendar.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.easypiechart.min.js" type="text/javascript"></script>
+<script src="/js/admin/jquery.sparkline.min.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL PLUGINS -->
 <!-- BEGIN PAGE LEVEL SCRIPTS -->
-<script src="js/admin/metronic.js" type="text/javascript"></script>
-<script src="js/admin/theme/layout.js" type="text/javascript"></script>
-<script src="js/admin/theme/quick-sidebar.js" type="text/javascript"></script>
-<script src="js/admin/theme/demo.js" type="text/javascript"></script>
-<script src="js/admin/theme/index.js" type="text/javascript"></script>
-<script src="js/admin/theme/tasks.js" type="text/javascript"></script>
+<script src="/js/admin/metronic.js" type="text/javascript"></script>
+<script src="/js/admin/theme/layout.js" type="text/javascript"></script>
+<script src="/js/admin/theme/quick-sidebar.js" type="text/javascript"></script>
+<script src="/js/admin/theme/demo.js" type="text/javascript"></script>
+<script src="/js/admin/theme/index.js" type="text/javascript"></script>
+<script src="/js/admin/theme/tasks.js" type="text/javascript"></script>
 <!-- END PAGE LEVEL SCRIPTS -->
 <script>
 jQuery(document).ready(function() {
    Metronic.init(); // init metronic core componets
    Layout.init(); // init layout
    QuickSidebar.init(); // init quick sidebar
-Demo.init(); // init demo features
+   Demo.init(); // init demo features
    Index.init();
    Index.initDashboardDaterange();
    Index.initJQVMAP(); // init index page's custom scripts

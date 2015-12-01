@@ -1,50 +1,44 @@
-@extends('layouts.app')
+@extends('layouts.login')
 
 @section('content')
-	<div class="container">
-		<div class="col-sm-offset-2 col-sm-8">
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					Login
-				</div>
 
-				<div class="panel-body">
-					<!-- Display Validation Errors -->
-					@include('common.errors')
+<div class="login login-bg">
 
-					<!-- New Task Form -->
-					<form action="/auth/login" method="POST" class="form-horizontal">
-						{{ csrf_field() }}
+    <div class="container">
+        <div class="login-box btn-rounded login-bg-input border-less-input">
+            <form id="login-form" name="login-form" action="/auth/login" method="post">
+                <div class="text-center"><h3>LOGIN</h3></div>
 
-						<!-- E-Mail Address -->
-						<div class="form-group">
-							<label for="email" class="col-sm-3 control-label">E-Mail</label>
+								{{ csrf_field() }}
 
-							<div class="col-sm-6">
-								<input type="email" name="email" class="form-control" value="{{ old('email') }}">
-							</div>
-						</div>
+								<p>
+									<!-- Display Validation Errors -->
+									@include('common.errors')
+								</p>
 
-						<!-- Password -->
-						<div class="form-group">
-							<label for="password" class="col-sm-3 control-label">Password</label>
+                <div class="form-group">
+                    <input type="text" name="email" value="{{ old('email') }}" class="form-control" placeholder="Email">
+                </div>
 
-							<div class="col-sm-6">
-								<input type="password" name="password" class="form-control">
-							</div>
-						</div>
+                <div class="form-group">
+                    <input type="password" name="password" class="form-control" placeholder="Password">
+                </div>
 
-						<!-- Login Button -->
-						<div class="form-group">
-							<div class="col-sm-offset-3 col-sm-6">
-								<button type="submit" class="btn btn-default">
-									<i class="fa fa-btn fa-sign-in"></i>Login
-								</button>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
-	</div>
+                <div class="form-group">
+                    <button class="btn btn-small btn-dark-solid full-width btn-rounded" type="submit" name="login-form-submit" value="login"><i class="fa fa-btn fa-sign-in"></i>Login</button>
+                </div>
+                <div class="form-group">
+                    <input type="checkbox" value="remember-me" id="checkbox1"> <label for="checkbox1">Remember me</label>
+                    <a class="pull-right" data-toggle="modal" href="#forgotPass"> Forgot Password?</a>
+                </div>
+
+
+            </form>
+        </div>
+        <div class="copyright-row text-center dark-txt">
+            Copyrights © All Rights Reserved by  <a href="http://joshgoodson.com" class="theme-color">Josh Goodson</a>
+        </div>
+    </div>
+
+</div>
 @endsection
