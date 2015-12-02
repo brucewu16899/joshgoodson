@@ -9,7 +9,8 @@
         "laravel/framework": "5.1.*",
         "roumen/asset": "^2.5",
         "ext-memcached": "^2.2",
-        "b3it/laravel-memcached-plus": "^2.1"
+        "b3it/laravel-memcached-plus": "^2.1",
+        "guzzlehttp/guzzle": "^6.1"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
