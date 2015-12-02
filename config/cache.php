@@ -13,7 +13,7 @@ return [
     |
     */
 
-    'default' => env('CACHE_DRIVER', 'file'),
+    'default' => env('CACHE_DRIVER', 'memcached'),
 
     /*
     |--------------------------------------------------------------------------
@@ -49,9 +49,23 @@ return [
 
         'memcached' => [
             'driver'  => 'memcached',
+            'persistent_id' => 'laravel_pool',
+            'sasl' => [
+                env('MEMCACHIER_USERNAME'),
+                env('MEMCACHIER_PASSWORD')
+            ],
+            'options' => [
+                'OPT_NO_BLOCK'         => true,
+                'OPT_AUTO_EJECT_HOSTS' => true,
+                'OPT_CONNECT_TIMEOUT'  => 2000,
+                'OPT_POLL_TIMEOUT'     => 2000,
+                'OPT_RETRY_TIMEOUT'    => 2,
+            ],
             'servers' => [
                 [
-                    'host' => '127.0.0.1', 'port' => 11211, 'weight' => 100,
+                    'host' => parse_url(env('MEMCACHIER_SERVERS', '127.0.0.1:11211'), PHP_URL_HOST),
+                    'port' => parse_url(env('MEMCACHIER_SERVERS', '127.0.0.1:11211'), PHP_URL_PORT),
+                    'weight' => 100,
                 ],
             ],
         ],

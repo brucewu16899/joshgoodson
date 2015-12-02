@@ -4,9 +4,59 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "748a5731408702dcf101981e42603107",
-    "content-hash": "0de78fef984ee1fb274899840972c57b",
+    "hash": "4aeabcb9e013ca11c68963a624916a19",
+    "content-hash": "d3b338b47c50ba4a1511719c6f79e3e3",
     "packages": [
+        {
+            "name": "b3it/laravel-memcached-plus",
+            "version": "2.1.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/b3it/laravel-memcached-plus.git",
+                "reference": "ecfb443f2c0287a5ef4ecb1700be4b8a3c099ad8"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/b3it/laravel-memcached-plus/zipball/ecfb443f2c0287a5ef4ecb1700be4b8a3c099ad8",
+                "reference": "ecfb443f2c0287a5ef4ecb1700be4b8a3c099ad8",
+                "shasum": ""
+            },
+            "require": {
+                "ext-memcached": "*",
+                "illuminate/cache": "5.*",
+                "illuminate/session": "5.*",
+                "php": ">=5.4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "B3IT\\MemcachedPlus\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Tom Castleman",
+                    "email": "tom.castleman@b3-it.com"
+                }
+            ],
+            "description": "Extends the built-in Laravel 5 Cache Memcached driver adding support for persistent connections, SASL and Memcached options.",
+            "keywords": [
+                "cache",
+                "heroku",
+                "laravel",
+                "memcached",
+                "memcachedcloud",
+                "memcachier",
+                "options",
+                "persistent",
+                "sasl"
+            ],
+            "time": "2015-03-06 19:17:17"
+        },
         {
             "name": "classpreloader/classpreloader",
             "version": "3.0.0",
