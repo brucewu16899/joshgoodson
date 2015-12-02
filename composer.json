@@ -7,8 +7,9 @@
     "require": {
         "php": ">=5.5.9",
         "laravel/framework": "5.1.*",
-        "predis/predis": "^1.0",
-        "roumen/asset": "^2.5"
+        "roumen/asset": "^2.5",
+        "heroku/heroku-buildpack-php": "^83.0",
+        "ext-memcached": "^2.2"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
