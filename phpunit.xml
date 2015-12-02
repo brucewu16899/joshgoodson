@@ -3,6 +3,7 @@
          backupStaticAttributes="false"
          bootstrap="bootstrap/autoload.php"
          colors="true"
+         verbose="true"
          convertErrorsToExceptions="true"
          convertNoticesToExceptions="true"
          convertWarningsToExceptions="true"
@@ -13,6 +14,9 @@
             <directory>./tests/</directory>
         </testsuite>
     </testsuites>
+    <logging>
+      <log type="coverage-xml" target="build/coverage-xml"/>
+    </logging>
     <filter>
         <whitelist>
             <directory suffix=".php">app/</directory>

@@ -1,43 +1,46 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Be right back.</title>
+@extends('layouts.simple')
 
-        <link href="https://fonts.googleapis.com/css?family=Lato:100" rel="stylesheet" type="text/css">
-
-        <style>
-            html, body {
-                height: 100%;
-            }
-            body {
-                margin: 0;
-                padding: 0;
-                width: 100%;
-                color: #B0BEC5;
-                display: table;
-                font-weight: 100;
-                font-family: 'Lato';
-            }
-            .container {
-                text-align: center;
-                display: table-cell;
-                vertical-align: middle;
-            }
-            .content {
-                text-align: center;
-                display: inline-block;
-            }
-            .title {
-                font-size: 72px;
-                margin-bottom: 40px;
-            }
-        </style>
-    </head>
-    <body>
+@section('page')
+<header id="header" class=" nav-center-align">
+    <div class="light-header">
         <div class="container">
-            <div class="content">
-                <div class="title">Be right back.</div>
+            <div id="massive-menu" class="menuzord">
             </div>
         </div>
-    </body>
-</html>
+    </div>
+</header>
+
+<section class="maintenance-banner page-content">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <img src="/img/maintenance-icon.png" alt=""/>
+                <div class="heading-title-alt text-center m-top-30 inline-block m-bot-0">
+                    <h3 class="text-uppercase">SITE IS UNDER MAINTENANCE</h3>
+                    <p>We’’ll be back shortly </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="body-content">
+   <div class="container">
+       <div class="row">
+           <div class="col-md-12">
+               <div class="subscribe-box gray-bg round-5 m-bot-100">
+                   <div class="subscribe-info">
+                       <h4>subscribe to get in touch</h4>
+                   </div>
+                   <div class="subscribe-form">
+                       <form class="form-inline">
+                           <input type="text" class="form-control" placeholder="Enter your email address">
+                           <button type="submit" class="btn btn-medium btn-rounded btn-dark-solid text-uppercase">subscribe</button>
+                       </form>
+                   </div>
+               </div>
+           </div>
+       </div>
+   </div>
+</section>
+@endsection
