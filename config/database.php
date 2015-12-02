@@ -1,5 +1,30 @@
 <?php
 
+// Heroku ClearDB configuration
+$cleardb = env('CLEARDB_DATABASE_URL');
+
+// CodeShip database configuration
+$codeshipUser = env('MYSQL_USER');
+$codeshipPass = env('MYSQL_PASSWORD');
+
+if ($codeshipUser && $codeshipPass) {
+    $dbHost = 'localhost';
+    $dbUser = $codeshipUser;
+    $dbPass = $codeshipPass;
+    $database = 'test';
+} elseif ($cleardb) {
+    $cleardb = parse_url($cleardb);
+    $dbHost = $cleardb['host'];
+    $dbUser = $cleardb['user'];
+    $dbPass = $cleardb['pass'];
+    $database = substr($cleardb['path'], 1);
+} else {
+    $dbHost = env('DB_HOST', 'localhost');
+    $dbUser = env('DB_USERNAME', 'forge');
+    $dbPass = env('DB_PASSWORD', '');
+    $database = env('DB_DATABASE', 'forge');
+}
+
 return [
 
     /*
@@ -54,10 +79,10 @@ return [
 
         'mysql' => [
             'driver'    => 'mysql',
-            'host'      => env('DB_HOST', 'localhost'),
-            'database'  => env('DB_DATABASE', 'forge'),
-            'username'  => env('DB_USERNAME', 'forge'),
-            'password'  => env('DB_PASSWORD', ''),
+            'host'      => $dbHost,
+            'database'  => $database,
+            'username'  => $dbUser,
+            'password'  => $dbPass,
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
             'prefix'    => '',
