@@ -14,34 +14,7 @@
                     <li><a href="/">Home</a></li>
                     <li><a href="/about">About</a></li>
                     <li><a href="/blog">Blog</a></li>
-
-                    <li class=""><a href="javascript:void(0)">Pages</a>
-                        <div class="megamenu">
-                            <div class="megamenu-row">
-                                <div class="col3">
-                                    <ul class="list-unstyled">
-                                        <li><a href="/about">About Me</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col3">
-                                    <ul class="list-unstyled">
-                                        <li><a href="shortcode-career.html">Career</a></li>
-                                        <li><a href="faq-1.html">FAQ 1</a></li>
-                                        <li><a href="maintenance.html">Maintenance</a></li>
-                                    </ul>
-                                </div>
-                                <div class="col3">
-                                    <ul class="list-unstyled">
-                                        <li><a href="contact-us-1.html">Contact 1</a></li>
-                                        <li><a href="contact-us-2.html">Contact 2</a></li>
-                                        <li><a href="contact-us-3.html">Contact 3</a></li>
-                                        <li><a href="404.html">Error 404</a></li>
-                                        <li><a href="404-alt.html">Error 404 Alt</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
+                    <li><a href="/contact">Contact</a></li>
 
                     <li class="nav-icon nav-divider">
                         <a href="javascript:void(0)">|</a>
