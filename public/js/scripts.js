@@ -23,7 +23,7 @@
     new WOW().init();
 
     $(document).ready(function () {
-        
+
         /* ---------------------------------------------
          retina fix
          --------------------------------------------- */
@@ -74,7 +74,7 @@
                 $(".showhide").trigger("click");
             }
         });
-        
+
         if ($.fn.onePageNav) {
             $('.op-nav').onePageNav({
                 currentClass: 'active'
@@ -360,16 +360,16 @@
         var progressBar = $(".progress-bar");
         progressBar.each(function(indx){
             $(this).data('animated',0);
-            if($.fn.visible) {
+            if($(this).visible()) {
                 animateProgressbar(this);
             }
         });
         $(window).on("scroll",function(){
-            if($.fn.visible){
-                progressBar.each(function(){
-                    animateProgressbar(this);
-                })
-            }
+            progressBar.each(function(){
+              if($(this).visible()) {
+                  animateProgressbar(this);
+              }
+            });
         });
 
         function animateProgressbar(pb){
@@ -385,8 +385,6 @@
         /* ---------------------------------------------
          popup link
          --------------------------------------------- */
-
-
         $('.popup-link').magnificPopup({
             type: 'image'
             // other options

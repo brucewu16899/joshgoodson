@@ -1,16 +1,9 @@
 @extends('layouts.page')
 
-@section('content')
-<section class="page-title">
-    <div class="container">
-        <h4 class="text-uppercase">PAGE NOT FOUND</h4>
-        <ol class="breadcrumb">
-            <li><a href="/">Home</a></li>
-            <li class="active">PAGE NOT FOUND</li>
-        </ol>
-    </div>
-</section>
+@section('title', 'PAGE NOT FOUND')
+@section('breadcrumbs', Breadcrumbs::render('404'))
 
+@section('content')
 <section class="body-content ">
     <div class="page-content">
         <div class="container">
@@ -30,7 +23,9 @@
                             This is not the page you <br />
                             are looking for.
                         </div>
-                        <a href="/" class="btn btn-medium  btn-theme-color">Take Me Home</a>
+                        {!! link_to_route('home', 'Take Me Home', [], [
+                          'class' => 'btn btn-medium btn-theme-color'
+                        ]) !!}
                     </div>
                 </div>
             </div>

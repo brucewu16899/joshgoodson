@@ -1,20 +1,9 @@
-@extends('layouts.blog')
+@extends('layouts.page')
+
+@section('title', 'Blog')
+@section('breadcrumbs', Breadcrumbs::render('blog'))
 
 @section('content')
-<section class="page-title">
-		<div class="container">
-				<div class="row">
-						<div class="col-md-12">
-								<h4 class="text-uppercase">Blog</h4>
-								<ol class="breadcrumb">
-										<li><a href="#">Home</a></li>
-										<li class="active">Blog</li>
-								</ol>
-						</div>
-				</div>
-		</div>
-</section>
-
 <section class="body-content">
 		<div class="page-content">
 				<div class="container">

@@ -43,8 +43,8 @@ class DownCommand extends Command
   public function fire()
   {
       //var_dump($this->connection);
-      //touch($this->laravel->storagePath().'/framework/down');
+      touch($this->laravel->storagePath().'/framework/down');
 
-      //$this->comment('Application is now in maintenance mode.');
+      $this->comment('Application is now in maintenance mode.');
   }
 }

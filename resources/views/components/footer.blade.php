@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="col-md-6">
-            <div class="social-link pull-right circle " >
+            <div class="social-link pull-right circle">
                 <a href="#"><i class="fa fa-facebook"></i></a>
                 <a href="#"><i class="fa fa-twitter"></i></a>
                 <a href="#"><i class="fa fa-google-plus"></i></a>
@@ -18,7 +18,5 @@
                 <a href="#"><i class="fa fa-rss"></i></a>
             </div>
         </div>
-
-
     </div>
 </footer>

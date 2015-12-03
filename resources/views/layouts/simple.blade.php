@@ -45,6 +45,7 @@
     <script src="/js/jquery.flexslider-min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/jquery.isotope.js"></script>
+    <script src="/js/jquery.visible.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
     <script src="/js/smooth.js"></script>
     <script src="/js/wow.min.js"></script>

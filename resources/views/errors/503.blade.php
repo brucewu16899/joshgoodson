@@ -1,15 +1,6 @@
 @extends('layouts.simple')
 
 @section('page')
-<header id="header" class=" nav-center-align">
-    <div class="light-header">
-        <div class="container">
-            <div id="massive-menu" class="menuzord">
-            </div>
-        </div>
-    </div>
-</header>
-
 <section class="maintenance-banner page-content">
     <div class="container">
         <div class="row">

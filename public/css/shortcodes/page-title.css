@@ -123,13 +123,12 @@
 -----------------------------------------------------------------*/
 
 .page-title.banner-background {
-    background-image: url(../../img/about/02.jpg);
     background-position: 50% 0;
     background-size: cover;
     /*background-attachment: fixed;*/
     background-repeat: no-repeat;
-    padding: 200px 0;
-    height: 630px;
+    padding: 100px 0;
+    height: 80px;
 }
 
 
@@ -197,4 +196,3 @@
     left: 30px;
     right: auto;
 }
-

@@ -6,7 +6,7 @@
     <meta name="description" content="Blog of Josh Goodson - inherently a programmer">
     <meta name="author" content="Josh Goodson">
 
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
 
     <title>Josh Goodson</title>
 
@@ -31,10 +31,9 @@
 </head>
 
 <body>
-
-<div id="tb-preloader">
-    <div class="tb-preloader-wave"></div>
-</div>
+    <div id="tb-preloader">
+        <div class="tb-preloader-wave"></div>
+    </div>
 
     @yield('content')
 

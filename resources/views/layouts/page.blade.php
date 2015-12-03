@@ -6,9 +6,9 @@
     <meta name="description" content="Blog of Josh Goodson - inherently a programmer">
     <meta name="author" content="Josh Goodson">
 
-    <link rel="icon" type="image/png" href="img/favicon.png">
+    <link rel="icon" type="image/png" href="/img/favicon.png">
 
-    <title>Josh Goodson</title>
+    <title>Josh Goodson - @yield('title')</title>
 
     <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
     <link href="/css/bootstrap-3.3.4.min.css" rel="stylesheet">
@@ -39,31 +39,32 @@
 <div class="wrapper">
         @include('components.header')
 
-        @section('content')
         <section class="page-title">
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="text-uppercase">Coming Soon</h4>
-                        <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Coming Soon</li>
-                        </ol>
+                        <h4 class="text-uppercase">@yield('title')</h4>
+                        @yield('breadcrumbs')
                     </div>
                 </div>
             </div>
         </section>
 
+        @section('content')
         <section class="body-content">
-            <div class="page-content">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12">
-                            Coming Soon
-                        </div>
-                    </div>
-                </div>
-            </div>
+        		<div class="page-content">
+        				<div class="container">
+        						<div class="row">
+        								<div class="col-md-8 col-md-offset-2">
+        									<div class="page-content">
+        										<div class="alert alert-danger" role="alert">
+                              <strong>Oh snap!</strong> Missing view content!
+                            </div>
+        									</div>
+        								</div>
+        						</div>
+        				</div>
+        		</div>
         </section>
         @show
 
@@ -76,6 +77,7 @@
     <script src="/js/jquery.flexslider-min.js"></script>
     <script src="/js/owl.carousel.min.js"></script>
     <script src="/js/jquery.isotope.js"></script>
+    <script src="/js/jquery.visible.min.js"></script>
     <script src="/js/jquery.magnific-popup.min.js"></script>
     <script src="/js/smooth.js"></script>
     <script src="/js/wow.min.js"></script>
