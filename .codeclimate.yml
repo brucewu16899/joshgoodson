@@ -13,7 +13,7 @@ engines:
   radon:
     enabled: true
   duplication:
-    enabled: true
+    enabled: false
     config:
       languages:
       - php
