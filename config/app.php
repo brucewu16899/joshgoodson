@@ -151,6 +151,7 @@ return [
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
         Cmgmyr\Messenger\MessengerServiceProvider::class,
         Lookitsatravis\Listify\ListifyServiceProvider::class,
+        Mmanos\Search\SearchServiceProvider::class,
 
         B3IT\MemcachedPlus\CacheServiceProvider::class,
         B3IT\MemcachedPlus\SessionServiceProvider::class,
@@ -201,6 +202,7 @@ return [
         'Request'   => Illuminate\Support\Facades\Request::class,
         'Response'  => Illuminate\Support\Facades\Response::class,
         'Route'     => Illuminate\Support\Facades\Route::class,
+        'Search'    => Mmanos\Search\Facade::class,
         'Schema'    => Illuminate\Support\Facades\Schema::class,
         'Session'   => Illuminate\Support\Facades\Session::class,
         'Storage'   => Illuminate\Support\Facades\Storage::class,
