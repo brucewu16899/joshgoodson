@@ -13,7 +13,8 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        \JoshGoodson\Console\Commands\Inspire::class,
+      \JoshGoodson\Console\Commands\Inspire::class,
+      \JoshGoodson\Console\Commands\DownCommand::class,
     ];
 
     /**
