@@ -146,6 +146,7 @@ return [
         JoshGoodson\Providers\RouteServiceProvider::class,
 
         Roumen\Asset\AssetServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
         B3IT\MemcachedPlus\CacheServiceProvider::class,
         B3IT\MemcachedPlus\SessionServiceProvider::class,
