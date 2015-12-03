@@ -152,6 +152,7 @@ return [
         Cmgmyr\Messenger\MessengerServiceProvider::class,
         Lookitsatravis\Listify\ListifyServiceProvider::class,
         Mmanos\Search\SearchServiceProvider::class,
+        Chrisbjr\ApiGuard\Providers\ApiGuardServiceProvider::class,
 
         B3IT\MemcachedPlus\CacheServiceProvider::class,
         B3IT\MemcachedPlus\SessionServiceProvider::class,

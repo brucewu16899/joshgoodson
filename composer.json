@@ -16,7 +16,8 @@
         "spatie/laravel-permission": "^1.2",
         "cmgmyr/messenger": "^2.8",
         "lookitsatravis/listify": "^1.1",
-        "mmanos/laravel-search": "^1.0"
+        "mmanos/laravel-search": "^1.0",
+        "chrisbjr/api-guard": "^2.3"
     },
     "require-dev": {
         "fzaninotto/faker": "~1.4",
