@@ -8,7 +8,7 @@
                 <img src="/img/maintenance-icon.png" alt=""/>
                 <div class="heading-title-alt text-center m-top-30 inline-block m-bot-0">
                     <h3 class="text-uppercase">SITE IS UNDER MAINTENANCE</h3>
-                    <p>We’’ll be back shortly </p>
+                    <p>We'll be back shortly </p>
                 </div>
             </div>
         </div>

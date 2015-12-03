@@ -17,7 +17,10 @@
 						@include('common.errors')
 
 						<!-- New Task Form -->
-						<form action="/task" method="POST" class="form-horizontal">
+						{!! Form::open([
+              'route' => 'saveTask',
+              'class' => 'form-horizontal'
+            ]) !!}
 							{{ csrf_field() }}
 
 							<!-- Task Name -->
@@ -61,13 +64,15 @@
 
 											<!-- Task Delete Button -->
 											<td>
-												<form action="/task/{{ $task->id }}" method="POST">
+												{!! Form::open(['route' => ['deleteTask', $task->id]]) !!}
 													{{ csrf_field() }}
 													{{ method_field('DELETE') }}
 
-													<button type="submit" id="delete-task-{{ $task->id }}" class="btn btn-danger">
-														<i class="fa fa-btn fa-trash"></i>Delete
-													</button>
+													{!! Form::button('<i class="fa fa-btn fa-trash"></i>Delete', [
+				                    'name' => 'delete-task-submit',
+				                    'type' => 'submit',
+				                    'class' => 'btn btn-danger'
+				                  ]) !!}
 												</form>
 											</td>
 										</tr>

@@ -149,6 +149,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Spatie\Permission\PermissionServiceProvider::class,
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
+        Cmgmyr\Messenger\MessengerServiceProvider::class,
 
         B3IT\MemcachedPlus\CacheServiceProvider::class,
         B3IT\MemcachedPlus\SessionServiceProvider::class,

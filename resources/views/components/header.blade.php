@@ -21,7 +21,7 @@
                         <ul class="dropdown">
                           <li>{!! link_to_route('profile', 'My Profile') !!}</li>
                           <li>{!! link_to_route('settings', 'My Settings') !!}</li>
-                          <li>{!! link_to_route('messages', 'My Messages') !!}</li>
+                          <li><a href="/messages">My Messages @include('messages.unread-count')</a></li>
                           <li>{!! link_to_route('tasks', 'My Tasks') !!}</li>
                         </ul>
                     </li>

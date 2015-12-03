@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "32496efa49ad08695a72fc8b08391b64",
-    "content-hash": "f175066c52ad6a5c05995c1ec6cad5cb",
+    "hash": "116cef23c9b1626827538a17f4e512d5",
+    "content-hash": "6588354b20de8001801ef592be208877",
     "packages": [
         {
             "name": "b3it/laravel-memcached-plus",
@@ -110,6 +110,59 @@
                 "preload"
             ],
             "time": "2015-11-09 22:51:51"
+        },
+        {
+            "name": "cmgmyr/messenger",
+            "version": "2.8.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cmgmyr/laravel-messenger.git",
+                "reference": "cdd514c91f2b43633b4dcdf196ad2cb482717a20"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cmgmyr/laravel-messenger/zipball/cdd514c91f2b43633b4dcdf196ad2cb482717a20",
+                "reference": "cdd514c91f2b43633b4dcdf196ad2cb482717a20",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.0",
+                "illuminate/database": "~5.0",
+                "illuminate/support": "~5.0",
+                "nesbot/carbon": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "adamwathan/faktory": "0.3.*",
+                "fabpot/php-cs-fixer": "1.0.*@dev",
+                "phpunit/phpunit": "4.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Cmgmyr\\Messenger\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Gmyr",
+                    "email": "cmgmyr@gmail.com",
+                    "homepage": "https://github.com/cmgmyr",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Simple user messaging tool for Laravel",
+            "keywords": [
+                "Messenger",
+                "laravel",
+                "messaging",
+                "user messaging"
+            ],
+            "time": "2015-10-28 22:32:55"
         },
         {
             "name": "danielstjules/stringy",
