@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "116cef23c9b1626827538a17f4e512d5",
-    "content-hash": "6588354b20de8001801ef592be208877",
+    "hash": "9881bbc5eb549a1b34f33451783b4d63",
+    "content-hash": "78ab56596144061b0d95d5e9b913d900",
     "packages": [
         {
             "name": "b3it/laravel-memcached-plus",
@@ -947,6 +947,61 @@
                 "storage"
             ],
             "time": "2015-09-30 22:26:59"
+        },
+        {
+            "name": "lookitsatravis/listify",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lookitsatravis/listify.git",
+                "reference": "757f6f9614be7f3756954b64625db729afe58e23"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lookitsatravis/listify/zipball/757f6f9614be7f3756954b64625db729afe58e23",
+                "reference": "757f6f9614be7f3756954b64625db729afe58e23",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/console": "~5.0",
+                "illuminate/database": "~5.0",
+                "illuminate/events": "~5.0",
+                "illuminate/support": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "satooshi/php-coveralls": "dev-master",
+                "way/phpunit-wrappers": "dev-master"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Lookitsatravis\\Listify": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Travis Vignon",
+                    "email": "travis@lookitsatravis.com",
+                    "homepage": "http://lookitsatravis.com"
+                }
+            ],
+            "description": "Turn any Eloquent model into a list! http://lookitsatravis.github.io/listify",
+            "keywords": [
+                "acts_as_list",
+                "eloquent",
+                "laravel",
+                "list",
+                "model",
+                "order",
+                "position",
+                "rails"
+            ],
+            "time": "2015-05-09 16:36:13"
         },
         {
             "name": "monolog/monolog",
