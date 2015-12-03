@@ -1,7 +1,5 @@
 ---
 engines:
-  csslint:
-    enabled: false
   eslint:
     enabled: true
   fixme:
@@ -12,15 +10,8 @@ engines:
     enabled: true
   radon:
     enabled: true
-  duplication:
-    enabled: false
-    config:
-      languages:
-      - php
-      - javascript
 ratings:
   paths:
-  - "**.css"
   - "**.js"
   - "**.php"
 exclude_paths:
