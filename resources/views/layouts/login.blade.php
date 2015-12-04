@@ -17,11 +17,8 @@
     <link href="/css/shortcodes/shortcodes.css" rel="stylesheet">
     <link href="/css/owl.carousel.css" rel="stylesheet">
     <link href="/css/owl.theme.css" rel="stylesheet">
-    <link href="/css/style.css?v=1" rel="stylesheet">
-    <link href="/css/style-responsive.css" rel="stylesheet">
-    <link href="/css/default-theme.css?v=1" rel="stylesheet">
 
-    <link href="/css/blog.css" rel="stylesheet">
+    <link href="/css/all.css" rel="stylesheet">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
