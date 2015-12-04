@@ -12,5 +12,16 @@ var elixir = require('laravel-elixir');
  */
 
 elixir(function(mix) {
-    mix.sass('app.scss');
+    // mix.sass([
+    //     'app.scss'
+    // ], 'public/css');
+
+    mix.styles([
+        'style.css',
+        'style-responsive.css',
+        'default-theme.css',
+        'blog.css',
+        'animate.css',
+        'linea-icon.css'
+    ], 'public/css');
 });
