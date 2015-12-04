@@ -1,40 +1,40 @@
 <?php
 
-// Home/Welcome
-Route::get('/', ['as' => 'home', function () {
-  return view('welcome');
-}]);
-// Blog
-Route::get('/blog', ['as' => 'blog', function () {
-  return view('blog');
-}]);
-// About
-Route::get('/about', ['as' => 'about', function () {
-  return view('about');
-}]);
-// Contact
-Route::get('/contact', ['as' => 'contact', function () {
-  return view('contact');
-}]);
-
-// Search
-Route::group(['prefix' => 'search'], function () {
-  Route::get('/', ['as' => 'search', function () {
-    return view('search');
-  }]);
-  Route::post('/', ['as' => 'submitSearch', function () {
-    return view('search');
-  }]);
+// Pages and Blog index
+Route::group(['prefix' => '/'], function () {
+  Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
+  Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
+  Route::get('about', ['as' => 'about', 'uses' => 'PageController@about']);
+  Route::get('contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 });
 
-// Admin Dashboard
-Route::get('/admin', function () { return view('admin'); });
+// Search
+Route::post('search/{term}', ['as' => 'search', 'uses' => 'SearchController@search']);
+
+// Admin template
+Route::get('admin', function () { return view('admin'); });
+
+Route::group(['middleware' => 'auth'], function() {
+  Route::get('dashboard', 'DashboardController@index');
+  Route::get('dashboard/edit/{user_id}', 'UserController@edit');
+  Route::post('dashboard/edit/{user_id}', 'UserController@update');
+});
+
+Route::group(['middleware' => 'admin'], function() {
+  Route::get('admin/dashboard', 'AdminController@index');
+  Route::get('admin/dashboard/users', 'UserController@index');
+  Route::get('admin/dashboard/users/create', 'UserController@create');
+  Route::post('admin/dashboard/users/create', 'UserController@store');
+  Route::get('admin/dashboard/users/edit/{id}', 'UserController@edit');
+  Route::post('admin/dashboard/users/edit/{id}', 'UserController@update');
+  Route::post('admin/dashboard/users/delete/{id}', 'UserController@destroy');
+});
 
 // Task routes...
 Route::group(['prefix' => 'tasks'], function () {
-    Route::get('/', ['as' => 'tasks', 'uses' => 'TaskController@index']);
-    Route::post('/', ['as' => 'saveTask', 'uses' => 'TaskController@store']);
-    Route::delete('{task}', ['as' => 'deleteTask', 'uses' => 'TaskController@destroy']);
+  Route::get('/', ['as' => 'tasks', 'uses' => 'TaskController@index']);
+  Route::post('/', ['as' => 'saveTask', 'uses' => 'TaskController@store']);
+  Route::delete('{task}', ['as' => 'deleteTask', 'uses' => 'TaskController@destroy']);
 });
 
 // User routes...
@@ -52,11 +52,11 @@ Route::group(['prefix' => 'user'], function () {
 
 // Messages routes...
 Route::group(['prefix' => 'messages'], function () {
-    Route::get('/', ['as' => 'messages', 'uses' => 'MessagesController@index']);
-    Route::get('create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
-    Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
-    Route::get('{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
-    Route::put('{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+  Route::get('/', ['as' => 'messages', 'uses' => 'MessagesController@index']);
+  Route::get('create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+  Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+  Route::get('{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+  Route::put('{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
 });
 
 // Authentication routes...

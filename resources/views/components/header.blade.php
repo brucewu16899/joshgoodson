@@ -36,11 +36,11 @@
                             <div class="megamenu-row">
                                 <div class="col12">
                                   {!! Form::open([
-                                    'route' => 'submitSearch',
+                                    'route' => 'search',
                                     'name' => 'search-form',
                                     'role' => 'form'
                                   ]) !!}
-                                  {!! Form::text('search', old('search'), [
+                                  {!! Form::text('term', old('term'), [
                                     'class' => 'form-control',
                                     'placeholder' => 'Enter Search Keyword'
                                   ]) !!}
