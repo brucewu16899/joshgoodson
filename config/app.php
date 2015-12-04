@@ -148,6 +148,7 @@ return [
         DaveJamesMiller\Breadcrumbs\ServiceProvider::class,
 
         // Users Service Providers
+        Zizaco\Entrust\EntrustServiceProvider::class,
         Cmgmyr\Messenger\MessengerServiceProvider::class,
 
         Lookitsatravis\Listify\ListifyServiceProvider::class,
@@ -184,6 +185,7 @@ return [
         'Crypt'       => Illuminate\Support\Facades\Crypt::class,
         'DB'          => Illuminate\Support\Facades\DB::class,
         'Eloquent'    => Illuminate\Database\Eloquent\Model::class,
+        'Entrust'     => Zizaco\Entrust\EntrustFacade::class,
         'Event'       => Illuminate\Support\Facades\Event::class,
         'File'        => Illuminate\Support\Facades\File::class,
         'Form'        => Collective\Html\FormFacade::class,
