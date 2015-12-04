@@ -34,13 +34,20 @@ class Authenticate
      */
     public function handle($request, Closure $next)
     {
-        if ($this->auth->guest()) {
-            if ($request->ajax()) {
+        if ($this->auth->guest())
+        {
+            if ($request->ajax())
+            {
                 return response('Unauthorized.', 401);
             }
 
             return redirect()->guest('auth/login');
         }
+
+        // if (Auth::user()->super_user == 1)
+        // {
+        //     return redirect('admin/dashboard');
+        // }
 
         return $next($request);
     }
