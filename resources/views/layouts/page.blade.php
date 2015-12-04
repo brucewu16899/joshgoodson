@@ -8,7 +8,7 @@
 
     <link rel="icon" type="image/png" href="/img/favicon.png">
 
-    <title>Josh Goodson - @yield('title')</title>
+    <title>{{ $title }} - Josh Goodson</title>
 
     <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
     <link href="/css/bootstrap-3.3.4.min.css" rel="stylesheet">
@@ -40,7 +40,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h4 class="text-uppercase">@yield('title')</h4>
+                        <h4 class="text-uppercase">
+                          @if (isset($icon))
+                            <i class="fa fa-btn fa-{{ $icon }}"></i>
+                          @endif
+                          {{ $title }}
+                        </h4>
                         @yield('breadcrumbs')
                     </div>
                 </div>
@@ -80,5 +85,8 @@
     <script src="/js/wow.min.js"></script>
     <script src="/js/imagesloaded.js"></script>
     <script src="/js/scripts.js?8"></script>
+    <script type="text/javascript">
+    @yield('page-scripts')
+    </script>
   </body>
 </html>

@@ -1,6 +1,5 @@
 @extends('layouts.page')
 
-@section('title', 'Blog')
 @section('breadcrumbs', Breadcrumbs::render('blog'))
 
 @section('content')

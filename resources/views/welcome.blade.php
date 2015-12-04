@@ -1,6 +1,5 @@
 @extends('layouts.page')
 
-@section('title', 'josh goodson')
 @section('breadcrumbs', Breadcrumbs::render('home'))
 
 @section('content')

@@ -16,7 +16,7 @@ class PageController extends Controller
      */
     public function home()
     {
-        return view('welcome');
+        return view('welcome', ['title' => 'josh goodson', 'icon' => 'align-justify']);
     }
 
     /**
@@ -26,7 +26,7 @@ class PageController extends Controller
      */
     public function about()
     {
-        return view('about');
+        return view('about', ['title' => 'About']);
     }
 
     /**
@@ -36,6 +36,6 @@ class PageController extends Controller
      */
     public function contact()
     {
-        return view('contact');
+        return view('contact', ['title' => 'Contact']);
     }
 }
