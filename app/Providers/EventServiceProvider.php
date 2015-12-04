@@ -28,6 +28,19 @@ class EventServiceProvider extends ServiceProvider
     {
         parent::boot($events);
 
-        //
+        // Fires on each authentication attempt
+        $events->listen('auth.attempt', function($credentials, $remember, $login) {
+            //
+        });
+
+        // Fires on successful logins
+        $events->listen('auth.login', function($user, $remember) {
+            //
+        });
+
+        // Fires on logouts
+        $events->listen('auth.logout', function($user) {
+            //
+        });
     }
 }
