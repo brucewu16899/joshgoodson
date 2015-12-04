@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 use JoshGoodson\Http\Requests;
 use JoshGoodson\Http\Controllers\Controller;
 
-class BlogController extends Controller
+class PostController extends Controller
 {
     /**
      * Display a listing of the resource.

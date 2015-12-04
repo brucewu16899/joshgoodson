@@ -3,7 +3,7 @@
 // Pages and Blog index
 Route::group(['prefix' => '/'], function () {
   Route::get('/', ['as' => 'home', 'uses' => 'PageController@home']);
-  Route::get('blog', ['as' => 'blog', 'uses' => 'BlogController@index']);
+  Route::get('blog', ['as' => 'blog', 'uses' => 'PostController@index']);
   Route::get('about', ['as' => 'about', 'uses' => 'PageController@about']);
   Route::get('contact', ['as' => 'contact', 'uses' => 'PageController@contact']);
 });
