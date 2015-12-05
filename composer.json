@@ -25,7 +25,8 @@
         "phpspec/phpspec": "~2.1",
         "heroku/heroku-buildpack-php": "^83.0",
         "codacy/coverage": "^1.0",
-        "laracasts/generators": "^1.1"
+        "laracasts/generators": "^1.1",
+        "laralib/l5scaffold": "^1.0"
     },
     "autoload": {
         "classmap": [
