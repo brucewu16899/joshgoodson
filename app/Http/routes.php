@@ -50,6 +50,7 @@ Route::group(['prefix' => 'user'], function () {
   }]);
 });
 
+Route::resource('roles', 'RoleController');
 // Messages routes...
 Route::group(['prefix' => 'messages'], function () {
   Route::get('/', ['as' => 'messages', 'uses' => 'MessagesController@index']);

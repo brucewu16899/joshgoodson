@@ -75,3 +75,28 @@ Breadcrumbs::register('403', function($breadcrumbs)
     $breadcrumbs->parent('home');
     $breadcrumbs->push('FORBIDDEN');
 });
+
+// Roles
+Breadcrumbs::register('roles.index', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin');
+    $breadcrumbs->push('Roles', route('roles.index'));
+});
+// View Role
+Breadcrumbs::register('roles.show', function($breadcrumbs, $role)
+{
+    $breadcrumbs->parent('roles.index');
+    $breadcrumbs->push($role->display_name, route('roles.show', ['id' => $role->id]));
+});
+// Create Role
+Breadcrumbs::register('roles.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin');
+    $breadcrumbs->push('Create Role', route('roles.create'));
+});
+// Edit Role
+Breadcrumbs::register('roles.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin');
+    $breadcrumbs->push('Edit Role', route('roles.create'));
+});
