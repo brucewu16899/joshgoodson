@@ -68,3 +68,10 @@ Breadcrumbs::register('404', function($breadcrumbs)
     $breadcrumbs->parent('home');
     $breadcrumbs->push('PAGE NOT FOUND');
 });
+
+// Forbidden
+Breadcrumbs::register('403', function($breadcrumbs)
+{
+    $breadcrumbs->parent('home');
+    $breadcrumbs->push('FORBIDDEN');
+});
