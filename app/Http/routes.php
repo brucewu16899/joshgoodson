@@ -31,16 +31,19 @@ Route::group(['middleware' => 'auth'], function() {
     Route::post('{message}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
     Route::put('{message}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
   });
+
+  // Task routes...
+  Route::get('tasks', ['as' => 'tasks.index', 'uses' => 'TaskController@index']);
+  Route::group(['prefix' => 'task'], function () {
+    Route::post('/', ['as' => 'tasks.store', 'uses' => 'TaskController@store']);
+    Route::get('{task}', ['as' => 'tasks.show', 'uses' => 'TaskController@show']);
+    Route::get('{task}/edit', ['as' => 'tasks.edit', 'uses' => 'TaskController@edit']);
+    Route::post('{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
+    Route::put('{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
+    Route::delete('{task}', ['as' => 'tasks.destroy', 'uses' => 'TaskController@destroy']);
+  });
 });
 
-// Task routes...
-Route::get('/tasks', ['as' => 'tasks.index', 'uses' => 'TaskController@index']);
-Route::get('/task/{task}', ['as' => 'tasks.show', 'uses' => 'TaskController@show']);
-Route::get('/task/{task}/edit', ['as' => 'tasks.edit', 'uses' => 'TaskController@edit']);
-Route::post('/task', ['as' => 'tasks.store', 'uses' => 'TaskController@store']);
-Route::post('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
-Route::put('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
-Route::delete('/task/{task}', ['as' => 'tasks.destroy', 'uses' => 'TaskController@destroy']);
 Route::group(['middleware' => 'role:admin'], function() {
   Route::group(['prefix' => 'admin/dashboard'], function () {
     Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
