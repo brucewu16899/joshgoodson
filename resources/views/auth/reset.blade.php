@@ -12,7 +12,6 @@
              <h5 class="text-uppercase">FORGOT YOUR PASSWORD? <span class="theme-color">RESET NOW</span></h5>
          </div>
          <p>
-          <!-- Display Validation Errors -->
           @include('common.errors')
          </p>
 
@@ -56,3 +55,4 @@
      </div>
   </div>
 </div>
+@endsection

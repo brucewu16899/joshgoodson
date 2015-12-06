@@ -1,92 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <meta name="description" content="Blog of Josh Goodson - inherently a programmer">
-    <meta name="author" content="Josh Goodson">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <meta name="description" content="Blog of Josh Goodson - inherently a programmer">
+  <meta name="author" content="Josh Goodson">
 
-    <link rel="icon" type="image/png" href="/img/favicon.png">
+  <link rel="icon" type="image/png" href="/img/favicon.png">
 
-    <title>{{ $title }} - Josh Goodson</title>
+  <title>{{ $title }} - Josh Goodson</title>
 
-    <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
-    <link href="/css/bootstrap-3.3.4.min.css" rel="stylesheet">
-    <link href="/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/css/magnific-popup.css" rel="stylesheet">
-    <link href="/css/shortcodes/shortcodes.css" rel="stylesheet">
-    <link href="/css/owl.carousel.css" rel="stylesheet">
-    <link href="/css/owl.theme.css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Abel|Source+Sans+Pro:400,300,300italic,400italic,600,600italic,700,700italic,900,900italic,200italic,200' rel='stylesheet' type='text/css'>
+  <link href="/css/bootstrap-3.3.4.min.css" rel="stylesheet">
+  <link href="/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/css/magnific-popup.css" rel="stylesheet">
+  <link href="/css/shortcodes/shortcodes.css" rel="stylesheet">
+  <link href="/css/owl.carousel.css" rel="stylesheet">
+  <link href="/css/owl.theme.css" rel="stylesheet">
 
-    <link href="/css/all.css" rel="stylesheet">
+  <link href="/css/all.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
+  <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
     <script src="/js/html5shiv.js"></script>
     <script src="/js/respond.min.js"></script>
-    <![endif]-->
+  <![endif]-->
 </head>
 
 <body>
 
 <div id="tb-preloader">
-    <div class="tb-preloader-wave"></div>
+  <div class="tb-preloader-wave"></div>
 </div>
 
 <div class="wrapper">
-        @include('components.header')
+  @include('components.header')
 
-        <section class="page-title">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <h4 class="text-uppercase">
-                          @if (isset($icon))
-                            <i class="fa fa-btn fa-{{ $icon }}"></i>
-                          @endif
-                          {{ $title }}
-                        </h4>
-                        @yield('breadcrumbs')
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        @section('content')
-        <section class="body-content">
-        		<div class="page-content">
-        				<div class="container">
-        						<div class="row">
-        								<div class="col-md-8 col-md-offset-2">
-        									<div class="page-content">
-        										<div class="alert alert-danger" role="alert">
-                              <strong>Oh snap!</strong> Missing view content!
-                            </div>
-        									</div>
-        								</div>
-        						</div>
-        				</div>
-        		</div>
-        </section>
-        @show
-
-        @include('components.footer')
+  <section class="page-title">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4 class="text-uppercase">
+            @if (isset($icon))
+              <i class="fa fa-btn fa-{{ $icon }}"></i>
+            @endif
+            {{ $title }}
+          </h4>
+          @yield('breadcrumbs')
+        </div>
+      </div>
     </div>
+  </section>
 
-    <script src="/js/jquery-1.10.2.min.js"></script>
-    <script src="/js/bootstrap-3.3.4.min.js"></script>
-    <script src="/js/menuzord.js"></script>
-    <script src="/js/jquery.flexslider-min.js"></script>
-    <script src="/js/owl.carousel.min.js"></script>
-    <script src="/js/jquery.isotope.js"></script>
-    <script src="/js/jquery.visible.min.js"></script>
-    <script src="/js/jquery.magnific-popup.min.js"></script>
-    <script src="/js/smooth.js"></script>
-    <script src="/js/wow.min.js"></script>
-    <script src="/js/imagesloaded.js"></script>
-    <script src="/js/scripts.js?8"></script>
-    <script type="text/javascript">
-    @yield('page-scripts')
-    </script>
-  </body>
+  @section('content')
+  <section class="body-content">
+    <div class="page-content">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-8 col-md-offset-2">
+            <div class="page-content">
+              <div class="alert alert-danger" role="alert">
+                <strong>Oh snap!</strong> Missing view content!
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  @show
+
+  @include('components.footer')
+</div>
+
+<script src="/js/jquery-1.10.2.min.js"></script>
+<script src="/js/bootstrap-3.3.4.min.js"></script>
+<script src="/js/menuzord.js"></script>
+<script src="/js/jquery.flexslider-min.js"></script>
+<script src="/js/owl.carousel.min.js"></script>
+<script src="/js/jquery.isotope.js"></script>
+<script src="/js/jquery.visible.min.js"></script>
+<script src="/js/jquery.magnific-popup.min.js"></script>
+<script src="/js/smooth.js"></script>
+<script src="/js/wow.min.js"></script>
+<script src="/js/imagesloaded.js"></script>
+<script src="/js/scripts.js?8"></script>
+<script type="text/javascript">
+  @yield('page-scripts')
+</script>
+</body>
+
 </html>
