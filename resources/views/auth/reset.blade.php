@@ -1,6 +1,5 @@
 @extends('layouts.page')
 
-@section('title', 'Reset Password')
 @section('breadcrumbs', Breadcrumbs::render('resetPassword'))
 
 @section('content')

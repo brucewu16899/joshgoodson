@@ -1,6 +1,6 @@
 @extends('layouts.page')
 
-@section('breadcrumbs', Breadcrumbs::render('forgotPassword'))
+@section('breadcrumbs', Breadcrumbs::render('password.forgot'))
 
 @section('content')
 <div class="container">
@@ -14,7 +14,7 @@
           @include('common.errors')
         </p>
 
-        {!! Form::open(['route' => 'submitForgotPassword', 'class' => 'login magazine-grid']) !!}
+        {!! Form::open(['route' => 'password.email', 'class' => 'forgot-password magazine-grid']) !!}
           {!! csrf_field() !!}
           <div class="row">
             <div class="form-group">

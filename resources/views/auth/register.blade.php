@@ -1,6 +1,6 @@
 @extends('layouts.page')
 
-@section('breadcrumbs', Breadcrumbs::render('register'))
+@section('breadcrumbs', Breadcrumbs::render('auth.register'))
 
 @section('content')
 <div class="container">
@@ -14,7 +14,7 @@
           @include('common.errors')
         </p>
 
-        {!! Form::open(['route' => 'submitRegister', 'class' => 'login magazine-grid']) !!}
+        {!! Form::open(['route' => 'auth.store', 'class' => 'register magazine-grid']) !!}
           <div class="row">
             {!! csrf_field() !!}
             <div class="form-group col-md-6 {{ $errors->has('name') ? 'has-error' : '' }}">

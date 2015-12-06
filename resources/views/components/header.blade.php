@@ -13,8 +13,8 @@
           </li>
 
           @if (Auth::guest())
-          <li class="nav-icon"><a href="/auth/register"><i class="fa fa-btn fa-heart"></i>Register</a></li>
-          <li class="nav-icon"><a href="/auth/login"><i class="fa fa-btn fa-sign-in"></i>Login</a></li>
+          <li class="nav-icon"><a href="{{ route('auth.register') }}"><i class="fa fa-btn fa-heart"></i>Register</a></li>
+          <li class="nav-icon"><a href="{{ route('auth.login') }}"><i class="fa fa-btn fa-sign-in"></i>Login</a></li>
           @else
           <li class="nav-icon">
             <a href="{{ route('users.profile', ['user' => Auth::user()]) }}"><i class="fa fa-btn fa-user"></i>{{ Auth::user()->name }}</a>
@@ -25,7 +25,7 @@
               <li>{!! link_to_route('tasks.index', 'My Tasks') !!}</li>
             </ul>
           </li>
-          <li class="nav-icon"><a href="/auth/logout"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
+          <li class="nav-icon"><a href="{{ route('auth.logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
           @endif
 
           <li class="nav-icon">

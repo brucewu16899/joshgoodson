@@ -4,7 +4,7 @@
 <div class="login login-bg">
   <div class="container">
     <div class="login-box btn-rounded login-bg-input border-less-input">
-      {!! Form::open(['route' => 'submitLogin', 'id' => 'login-form', 'name' => 'login-form']) !!}
+      {!! Form::open(['route' => 'auth.authenticate', 'id' => 'login-form', 'name' => 'login-form']) !!}
       <div class="text-center">
         <h3>LOGIN</h3></div>
         {!! csrf_field() !!}
@@ -21,7 +21,9 @@
           {!! Form::button('<i class="fa fa-btn fa-sign-in"></i>Login', [ 'name' => 'login-form-submit', 'value' => 'login', 'type' => 'submit', 'class' => 'btn btn-small btn-dark-solid full-width btn-rounded' ]) !!}
         </div>
         <div class="form-group">
-          {!! Form::checkbox('remember', 'remember-me', false, ['id' => 'remember']) !!} {!! Form::label('remember', 'Remember me') !!} {!! link_to_route('forgotPassword', 'Forgot Password?', [], [ 'class' => 'pull-right', 'data-toggle' => 'modal' ]) !!}
+          {!! Form::checkbox('remember', 'remember-me', false, ['id' => 'remember']) !!}
+          {!! Form::label('remember', 'Remember me') !!}
+          {!! link_to_route('password.forgot', 'Forgot Password?', [], [ 'class' => 'pull-right', 'data-toggle' => 'modal' ]) !!}
         </div>
       </form>
     </div>

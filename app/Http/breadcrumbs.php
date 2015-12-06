@@ -42,14 +42,14 @@ Breadcrumbs::register('page', function($breadcrumbs, $page)
 });
 
 // User Register
-Breadcrumbs::register('register', function($breadcrumbs)
+Breadcrumbs::register('auth.register', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Register', route('register'));
+    $breadcrumbs->push('Register', route('auth.register'));
 });
 
 // User Forgot Password
-Breadcrumbs::register('forgotPassword', function($breadcrumbs)
+Breadcrumbs::register('password.forgot', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
     $breadcrumbs->push('Forgot Password', route('password.forgot'));

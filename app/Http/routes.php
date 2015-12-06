@@ -60,19 +60,19 @@ Route::resource('roles', 'RoleController');
 
 // Authentication routes...
 Route::group(['prefix' => 'auth'], function () {
-  Route::get('login', ['as' => 'login', 'uses' => 'Auth\AuthController@getLogin']);
-  Route::post('login', ['as' => 'submitLogin', 'uses' => 'Auth\AuthController@postLogin']);
-  Route::get('logout', ['as' => 'logout', 'uses' => 'Auth\AuthController@getLogout']);
-  Route::get('register', ['as' => 'register', 'uses' => 'Auth\AuthController@getRegister']);
-  Route::post('register', ['as' => 'submitRegister', 'uses' => 'Auth\AuthController@postRegister']);
+  Route::get('login', ['as' => 'auth.login', 'uses' => 'Auth\AuthController@getLogin']);
+  Route::post('login', ['as' => 'auth.authenticate', 'uses' => 'Auth\AuthController@postLogin']);
+  Route::get('logout', ['as' => 'auth.logout', 'uses' => 'Auth\AuthController@getLogout']);
+  Route::get('register', ['as' => 'auth.register', 'uses' => 'Auth\AuthController@getRegister']);
+  Route::post('register', ['as' => 'auth.store', 'uses' => 'Auth\AuthController@postRegister']);
 });
 
 // Password Reset routes...
 Route::group(['prefix' => 'password'], function () {
   // Link request...
-  Route::get('email', ['as' => 'forgotPassword', 'uses' => 'Auth\PasswordController@getEmail']);
-  Route::post('email', ['as' => 'submitForgotPassword', 'uses' => 'Auth\PasswordController@postEmail']);
+  Route::get('email', ['as' => 'password.forgot', 'uses' => 'Auth\PasswordController@getEmail']);
+  Route::post('email', ['as' => 'password.email', 'uses' => 'Auth\PasswordController@postEmail']);
   // Reset password...
-  Route::get('reset/{token}', ['as' => 'passwordReset', 'uses' => 'Auth\PasswordController@getReset']);
-  Route::post('reset', ['as' => 'submitPasswordReset', 'uses' => 'Auth\PasswordController@postReset']);
+  Route::get('reset/{token}', ['as' => 'password.token', 'uses' => 'Auth\PasswordController@getReset']);
+  Route::post('reset', ['as' => 'password.reset', 'uses' => 'Auth\PasswordController@postReset']);
 });
