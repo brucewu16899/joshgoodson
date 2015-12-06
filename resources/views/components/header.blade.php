@@ -25,6 +25,16 @@
               <li>{!! link_to_route('tasks.index', 'My Tasks') !!}</li>
             </ul>
           </li>
+          @role('admin')
+          <li class="nav-icon">
+            {!! link_to_route('admin.dashboard', 'Admin') !!}
+            <ul class="dropdown">
+              <li>{!! link_to_route('admin.dashboard.settings', 'Settings') !!}</li>
+              <li>{!! link_to_route('roles.index', 'Roles') !!}</li>
+              <li>{!! link_to_route('permissions.index', 'Permissions') !!}</li>
+            </ul>
+          </li>
+          @endrole
           <li class="nav-icon"><a href="{{ route('auth.logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
           @endif
 

@@ -11,9 +11,6 @@ Route::group(['prefix' => '/'], function () {
 // Search
 Route::post('search/{term}', ['as' => 'search', 'uses' => 'SearchController@search']);
 
-// Admin template
-Route::get('admin', function () { return view('admin'); });
-
 Route::group(['middleware' => 'auth'], function() {
   // User Dashboard routes...
   Route::group(['prefix' => 'dashboard'], function () {
@@ -25,14 +22,6 @@ Route::group(['middleware' => 'auth'], function() {
     Route::put('{user}', ['as' => 'users.profile.update', 'uses' => 'UserController@profileUpdate']);
   });
 
-Route::group(['middleware' => 'admin'], function() {
-  Route::get('admin/dashboard', 'AdminController@index');
-  Route::get('admin/dashboard/users', 'UserController@index');
-  Route::get('admin/dashboard/users/create', 'UserController@create');
-  Route::post('admin/dashboard/users/create', 'UserController@store');
-  Route::get('admin/dashboard/users/edit/{id}', 'UserController@edit');
-  Route::post('admin/dashboard/users/edit/{id}', 'UserController@update');
-  Route::post('admin/dashboard/users/delete/{id}', 'UserController@destroy');
   // Messages routes...
   Route::get('messages', ['as' => 'messages.index', 'uses' => 'MessagesController@index']);
   Route::group(['prefix' => 'message'], function () {
@@ -52,7 +41,14 @@ Route::post('/task', ['as' => 'tasks.store', 'uses' => 'TaskController@store']);
 Route::post('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
 Route::put('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
 Route::delete('/task/{task}', ['as' => 'tasks.destroy', 'uses' => 'TaskController@destroy']);
+Route::group(['middleware' => 'role:admin'], function() {
+  Route::group(['prefix' => 'admin/dashboard'], function () {
+    Route::get('/', ['as' => 'admin.dashboard', 'uses' => 'AdminController@index']);
+    Route::get('settings', ['as' => 'admin.dashboard.settings', 'uses' => 'AdminController@settings']);
+  });
 
+  // Admin template
+  Route::get('admin', function () { return view('admin'); });
 
 Route::resource('roles', 'RoleController');
   Route::resource('users', 'UserController');

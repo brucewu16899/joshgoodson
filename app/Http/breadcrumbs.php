@@ -127,10 +127,22 @@ Breadcrumbs::register('403', function($breadcrumbs)
     $breadcrumbs->push('FORBIDDEN');
 });
 
+// Admin Dashboard
+Breadcrumbs::register('admin.dashboard', function($breadcrumbs)
+{
+    $breadcrumbs->push('Admin Dashboard', route('admin.dashboard'));
+});
+
+// Admin Settings
+Breadcrumbs::register('admin.dashboard.settings', function($breadcrumbs)
+{
+    $breadcrumbs->push('Admin Settings', route('admin.dashboard.settings'));
+});
+
 // Roles
 Breadcrumbs::register('roles.index', function($breadcrumbs)
 {
-    $breadcrumbs->parent('admin');
+    $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Roles', route('roles.index'));
 });
 // View Role
@@ -142,12 +154,12 @@ Breadcrumbs::register('roles.show', function($breadcrumbs, $role)
 // Create Role
 Breadcrumbs::register('roles.create', function($breadcrumbs)
 {
-    $breadcrumbs->parent('admin');
+    $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Create Role', route('roles.create'));
 });
 // Edit Role
 Breadcrumbs::register('roles.edit', function($breadcrumbs)
 {
-    $breadcrumbs->parent('admin');
+    $breadcrumbs->parent('admin.dashboard');
     $breadcrumbs->push('Edit Role', route('roles.create'));
 });
