@@ -30,6 +30,7 @@
             {!! link_to_route('admin.dashboard', 'Admin') !!}
             <ul class="dropdown">
               <li>{!! link_to_route('admin.dashboard.settings', 'Settings') !!}</li>
+              <li>{!! link_to_route('users.index', 'Users') !!}</li>
               <li>{!! link_to_route('roles.index', 'Roles') !!}</li>
               <li>{!! link_to_route('permissions.index', 'Permissions') !!}</li>
             </ul>

@@ -139,6 +139,32 @@ Breadcrumbs::register('admin.dashboard.settings', function($breadcrumbs)
     $breadcrumbs->push('Admin Settings', route('admin.dashboard.settings'));
 });
 
+// Users
+Breadcrumbs::register('users.index', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Users', route('users.index'));
+});
+// View User
+Breadcrumbs::register('users.show', function($breadcrumbs, $user)
+{
+    $breadcrumbs->parent('users.index');
+    $breadcrumbs->push($user->name, route('users.show', ['id' => $user->id]));
+});
+// Create User
+Breadcrumbs::register('users.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Create User', route('users.create'));
+});
+// Edit User
+Breadcrumbs::register('users.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('admin.dashboard');
+    $breadcrumbs->push('Edit User', route('users.create'));
+});
+
+
 // Roles
 Breadcrumbs::register('roles.index', function($breadcrumbs)
 {

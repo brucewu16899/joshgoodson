@@ -7,6 +7,7 @@ use JoshGoodson\Http\Controllers\Controller;
 
 use JoshGoodson\User;
 use Illuminate\Http\Request;
+use Auth;
 use Validator;
 
 class UserController extends Controller
@@ -19,9 +20,10 @@ class UserController extends Controller
    */
   public function index()
   {
-    $users = User::orderBy('id', 'desc')->paginate(10);
+    $title = 'Users';
+    $users = User::orderBy('id', 'asc')->paginate(10);
 
-    return view('users.index', compact('users'));
+    return view('users.index', compact('users', 'title'));
   }
 
   /**
@@ -31,7 +33,9 @@ class UserController extends Controller
    */
   public function create()
   {
-    return view('users.create');
+    $title = 'Create User';
+    $icon = 'user';
+    return view('users.create', compact('title', 'icon'));
   }
 
   /**
@@ -69,8 +73,10 @@ class UserController extends Controller
   public function show($id)
   {
     $user = User::findOrFail($id);
+    $title = $user->name;
+    $icon = 'user';
 
-    return view('users.show', compact('user'));
+    return view('users.show', compact('user', 'title', 'icon'));
   }
 
   /**
@@ -97,8 +103,10 @@ class UserController extends Controller
   public function edit($id)
   {
     $user = User::findOrFail($id);
+    $title = $user->name;
+    $icon = 'user';
 
-    return view('users.edit', compact('user'));
+    return view('users.edit', compact('user', 'title', 'icon'));
   }
 
   /**
