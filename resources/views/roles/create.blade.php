@@ -29,7 +29,7 @@
             @endif
           </div>
           <div class="form-group">
-            {!! Form::button('<i class="fa fa-btn fa-plus"></i>Create', [ 'name' => 'role-form-submit', 'value' => 'create-role', 'type' => 'submit', 'class' => 'btn btn-small btn-dark-solid btn-rounded' ]) !!}
+            {!! Form::button('<i class="fa fa-btn fa-plus"></i>Create Role', [ 'name' => 'role-form-submit', 'value' => 'create-role', 'type' => 'submit', 'class' => 'btn btn-small btn-dark-solid btn-rounded' ]) !!}
             <a class="btn btn-link pull-right" href="{{ route('roles.index') }}"><i class="fa fa-btn fa-backward"></i> Back</a>
           </div>
         </form>

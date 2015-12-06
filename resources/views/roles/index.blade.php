@@ -7,7 +7,7 @@
   <div class="container">
     <div class="row">
       <div class="page-header clearfix">
-        <a class="btn btn-success pull-right" href="{{ route('roles.create') }}"><i class="fa fa-btn fa-plus"></i> Create</a>
+        <a class="btn btn-success pull-right" href="{{ route('roles.create') }}"><i class="fa fa-btn fa-plus"></i> Create Role</a>
       </div>
       <div class="col-md-12">
         @if($roles->count())
@@ -47,17 +47,21 @@
                 <a class="btn btn-xs btn-primary" href="{{ route('roles.show', $role->id) }}"><i class="fa fa-btn fa-eye"></i> View</a>
                 <a class="btn btn-xs btn-warning" href="{{ route('roles.edit', $role->id) }}"><i class="fa fa-btn fa-edit"></i> Edit</a>
                 <form id="deleteRole{{ $role->id }}" action="{{ route('roles.destroy', $role->id) }}" method="POST" style="display: inline;">
-                  <input type="hidden" name="_method" value="DELETE"> {!! csrf_field() !!}
-                  <button id="deleteRole" class="btn btn-xs btn-danger" data-toggle="alert" data-id="{{ $role->id }}" data-title="Delete Role <strong>{{ $role->name }}</strong>" data-message="Are you sure you want to delete the <strong>{{ $role->display_name }}</strong> role?">
-                    <i class="fa fa-btn fa-trash"></i> Delete</button>
+                  {{ method_field('DELETE') }}
+                  {!! csrf_field() !!}
+                  <button id="deleteRole{{ $role->id }}" class="btn btn-xs btn-danger" data-toggle="alert" data-id="{{ $role->id }}" data-title="Delete Role <strong>{{ $role->name }}</strong>" data-message="Are you sure you want to delete the <strong>{{ $role->display_name }}</strong> role?">
+                    <i class="fa fa-btn fa-trash"></i> Delete
+                  </button>
                 </form>
               </td>
             </tr>
             @endforeach
           </tbody>
         </table>
-        {!! $roles->render() !!} @else
-        <h3 class="text-center alert alert-info">Empty!</h3> @endif
+        {!! $roles->render() !!}
+        @else
+        <h3 class="text-center alert alert-info">Empty!</h3>
+        @endif
       </div>
     </div>
   </div>
@@ -68,7 +72,9 @@
 $("#cancelDelete").click(function() {
   $("#alert").hide();
 });
-$("#deleteRole").click(function(e) {
+@if($roles->count())
+@foreach($roles as $role)
+$("button#deleteRole{{ $role->id }}").click(function(e) {
   e.preventDefault();
   var id = $(this).data('id');
   var title = $(this).data('title');
@@ -78,6 +84,8 @@ $("#deleteRole").click(function(e) {
   $("#alert #message").html(message);
   $("#alert").show();
 });
+@endforeach
+@endif
 $("#confirmDeleteRole").click(function() {
   var id = $("#alert").data('id');
   $("form#deleteRole" + id).submit();
