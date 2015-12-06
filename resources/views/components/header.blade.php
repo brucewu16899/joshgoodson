@@ -19,9 +19,9 @@
           <li class="nav-icon">
             <a href="{{ route('users.profile', ['user' => Auth::user()]) }}"><i class="fa fa-btn fa-user"></i>{{ Auth::user()->name }}</a>
             <ul class="dropdown">
-              <li><a href="/messages">My Messages @include('messages.unread-count')</a></li>
               <li>{!! link_to_route('dashboard', 'Dashboard') !!}</li>
               <li>{!! link_to_route('dashboard.settings', 'My Settings') !!}</li>
+              <li><a href="{{ route('messages.index') }}">My Inbox @include('messages.unread-count')</a></li>
               <li>{!! link_to_route('tasks.index', 'My Tasks') !!}</li>
             </ul>
           </li>

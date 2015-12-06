@@ -33,6 +33,15 @@ Route::group(['middleware' => 'admin'], function() {
   Route::get('admin/dashboard/users/edit/{id}', 'UserController@edit');
   Route::post('admin/dashboard/users/edit/{id}', 'UserController@update');
   Route::post('admin/dashboard/users/delete/{id}', 'UserController@destroy');
+  // Messages routes...
+  Route::get('messages', ['as' => 'messages.index', 'uses' => 'MessagesController@index']);
+  Route::group(['prefix' => 'message'], function () {
+    Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
+    Route::get('create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
+    Route::get('{message}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
+    Route::post('{message}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+    Route::put('{message}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+  });
 });
 
 // Task routes...
@@ -44,27 +53,9 @@ Route::post('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@u
 Route::put('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
 Route::delete('/task/{task}', ['as' => 'tasks.destroy', 'uses' => 'TaskController@destroy']);
 
-// User routes...
-Route::group(['prefix' => 'user'], function () {
-  Route::get('profile', ['as' => 'profile', function () {
-    return view('users.profile');
-  }]);
-  Route::get('settings', ['as' => 'settings', function () {
-    return view('users.settings');
-  }]);
-  Route::get('messages', ['as' => 'messages', function () {
-    return route('messages.show');
-  }]);
-});
 
 Route::resource('roles', 'RoleController');
-// Messages routes...
-Route::group(['prefix' => 'messages'], function () {
-  Route::get('/', ['as' => 'messages', 'uses' => 'MessagesController@index']);
-  Route::get('create', ['as' => 'messages.create', 'uses' => 'MessagesController@create']);
-  Route::post('/', ['as' => 'messages.store', 'uses' => 'MessagesController@store']);
-  Route::get('{id}', ['as' => 'messages.show', 'uses' => 'MessagesController@show']);
-  Route::put('{id}', ['as' => 'messages.update', 'uses' => 'MessagesController@update']);
+  Route::resource('users', 'UserController');
 });
 
 // Authentication routes...

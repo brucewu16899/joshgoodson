@@ -94,6 +94,25 @@ Breadcrumbs::register('tasks.edit', function($breadcrumbs)
     $breadcrumbs->push('Edit Task', route('tasks.edit'));
 });
 
+// My Inbox
+Breadcrumbs::register('messages.index', function($breadcrumbs)
+{
+    $breadcrumbs->parent('dashboard');
+    $breadcrumbs->push('My Inbox', route('messages.index'));
+});
+// Create Message
+Breadcrumbs::register('messages.create', function($breadcrumbs)
+{
+    $breadcrumbs->parent('messages.index');
+    $breadcrumbs->push('New Message', route('messages.create'));
+});
+// View Message
+Breadcrumbs::register('messages.show', function($breadcrumbs)
+{
+    $breadcrumbs->parent('messages.index');
+    $breadcrumbs->push('View Message', route('messages.show'));
+});
+
 // Not Found
 Breadcrumbs::register('404', function($breadcrumbs)
 {
