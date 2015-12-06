@@ -15,10 +15,15 @@ Route::post('search/{term}', ['as' => 'search', 'uses' => 'SearchController@sear
 Route::get('admin', function () { return view('admin'); });
 
 Route::group(['middleware' => 'auth'], function() {
-  Route::get('dashboard', 'DashboardController@index');
-  Route::get('dashboard/edit/{user_id}', 'UserController@edit');
-  Route::post('dashboard/edit/{user_id}', 'UserController@update');
-});
+  // User Dashboard routes...
+  Route::group(['prefix' => 'dashboard'], function () {
+    Route::get('/', ['as' => 'dashboard', 'uses' => 'DashboardController@index']);
+    Route::get('settings', ['as' => 'dashboard.settings', 'uses' => 'DashboardController@settings']);
+    Route::get('{user}/profile', ['as' => 'users.profile', 'uses' => 'UserController@profile']);
+    Route::get('{user}/edit', ['as' => 'users.profile.edit', 'uses' => 'UserController@profileEdit']);
+    Route::post('{user}', ['as' => 'users.profile.update', 'uses' => 'UserController@profileUpdate']);
+    Route::put('{user}', ['as' => 'users.profile.update', 'uses' => 'UserController@profileUpdate']);
+  });
 
 Route::group(['middleware' => 'admin'], function() {
   Route::get('admin/dashboard', 'AdminController@index');

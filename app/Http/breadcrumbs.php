@@ -52,13 +52,33 @@ Breadcrumbs::register('register', function($breadcrumbs)
 Breadcrumbs::register('forgotPassword', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('Forgot Password', route('forgotPassword'));
+    $breadcrumbs->push('Forgot Password', route('password.forgot'));
+});
+
+// User Dashboard
+Breadcrumbs::register('dashboard', function($breadcrumbs)
+{
+    $breadcrumbs->push('Dashboard', route('dashboard'));
+});
+
+// User Profile
+Breadcrumbs::register('dashboard.profile', function($breadcrumbs)
+{
+    $breadcrumbs->parent('dashboard');
+    $breadcrumbs->push('Profile', route('users.profile'));
+});
+
+// User Settings
+Breadcrumbs::register('dashboard.settings', function($breadcrumbs)
+{
+    $breadcrumbs->parent('dashboard');
+    $breadcrumbs->push('My Settings', route('dashboard.settings'));
 });
 
 // My Tasks
 Breadcrumbs::register('tasks.index', function($breadcrumbs)
 {
-    $breadcrumbs->parent('home');
+    $breadcrumbs->parent('dashboard');
     $breadcrumbs->push('My Tasks', route('tasks.index'));
 });
 // View Task
