@@ -15,17 +15,17 @@ class RoleTableSeeder extends Seeder
       Role::create([
         'name' => 'admin',
         'display_name' => 'Administrator',
-        'description' => 'Site Administrator',
+        'description' => 'User is allowed to manage all resources',
       ]);
       Role::create([
         'name' => 'user',
-        'display_name' => 'User',
-        'description' => 'Registered User',
+        'display_name' => 'Registered User',
+        'description' => 'User is allowed to use most public resources',
       ]);
       Role::create([
         'name' => 'guest',
-        'display_name' => 'Guest',
-        'description' => 'Guest User',
+        'display_name' => 'Guest User',
+        'description' => 'User is allowed to use only the basic public resources',
       ]);
     }
 }

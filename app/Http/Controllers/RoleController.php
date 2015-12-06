@@ -18,8 +18,8 @@ class RoleController extends Controller {
   public function index()
   {
     $title = 'Roles';
-    $icon = 'align-justify';
-    $roles = Role::orderBy('id', 'desc')->paginate(10);
+    $icon = 'user-secret';
+    $roles = Role::orderBy('id', 'asc')->paginate(10);
 
     return view('roles.index', compact('roles', 'title', 'icon'));
   }
@@ -33,6 +33,7 @@ class RoleController extends Controller {
   {
     $title = "Create Role";
     $icon = 'plus';
+
     return view('roles.create', compact('title', 'icon'));
   }
 

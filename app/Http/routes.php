@@ -50,8 +50,8 @@ Route::group(['middleware' => 'role:admin'], function() {
   // Admin template
   Route::get('admin', function () { return view('admin'); });
 
-Route::resource('roles', 'RoleController');
   Route::resource('users', 'UserController');
+  Route::resource('roles', 'RoleController');
 });
 
 // Authentication routes...
