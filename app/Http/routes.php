@@ -31,11 +31,13 @@ Route::group(['middleware' => 'admin'], function() {
 });
 
 // Task routes...
-Route::group(['prefix' => 'tasks'], function () {
-  Route::get('/', ['as' => 'tasks', 'uses' => 'TaskController@index']);
-  Route::post('/', ['as' => 'saveTask', 'uses' => 'TaskController@store']);
-  Route::delete('{task}', ['as' => 'deleteTask', 'uses' => 'TaskController@destroy']);
-});
+Route::get('/tasks', ['as' => 'tasks.index', 'uses' => 'TaskController@index']);
+Route::get('/task/{task}', ['as' => 'tasks.show', 'uses' => 'TaskController@show']);
+Route::get('/task/{task}/edit', ['as' => 'tasks.edit', 'uses' => 'TaskController@edit']);
+Route::post('/task', ['as' => 'tasks.store', 'uses' => 'TaskController@store']);
+Route::post('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
+Route::put('/task/{task}', ['as' => 'tasks.update', 'uses' => 'TaskController@update']);
+Route::delete('/task/{task}', ['as' => 'tasks.destroy', 'uses' => 'TaskController@destroy']);
 
 // User routes...
 Route::group(['prefix' => 'user'], function () {

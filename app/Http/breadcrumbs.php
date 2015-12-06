@@ -56,10 +56,22 @@ Breadcrumbs::register('forgotPassword', function($breadcrumbs)
 });
 
 // My Tasks
-Breadcrumbs::register('tasks', function($breadcrumbs)
+Breadcrumbs::register('tasks.index', function($breadcrumbs)
 {
     $breadcrumbs->parent('home');
-    $breadcrumbs->push('My Tasks', route('tasks'));
+    $breadcrumbs->push('My Tasks', route('tasks.index'));
+});
+// View Task
+Breadcrumbs::register('tasks.show', function($breadcrumbs, $task)
+{
+    $breadcrumbs->parent('tasks.index');
+    $breadcrumbs->push('View Task', route('tasks.show', ['id' => $task->id]));
+});
+// Edit Task
+Breadcrumbs::register('tasks.edit', function($breadcrumbs)
+{
+    $breadcrumbs->parent('tasks.index');
+    $breadcrumbs->push('Edit Task', route('tasks.edit'));
 });
 
 // Not Found

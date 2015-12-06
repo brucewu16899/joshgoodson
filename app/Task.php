@@ -9,6 +9,7 @@ use Illuminate\Database\Eloquent\Model;
 class Task extends Model
 {
     use Listify;
+
     /**
      * The attributes that as mass assignable.
      *
