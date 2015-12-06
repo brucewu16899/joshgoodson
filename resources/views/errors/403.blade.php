@@ -22,7 +22,8 @@
               This is not the page you
               <br /> are looking for.
             </div>
-            {!! link_to_route('login', 'Login', [], [ 'class' => 'btn btn-medium btn-theme-color' ]) !!} {!! link_to_route('register', 'Register', [], [ 'class' => 'btn btn-medium btn-dark-solid' ]) !!}
+            {!! link_to_route('auth.login', 'Login', [], [ 'class' => 'btn btn-medium btn-theme-color' ]) !!}
+            {!! link_to_route('auth.register', 'Register', [], [ 'class' => 'btn btn-medium btn-dark-solid' ]) !!}
           </div>
         </div>
       </div>
