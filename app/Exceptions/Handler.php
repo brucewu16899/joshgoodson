@@ -42,14 +42,32 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exc)
     {
-        if ($exc instanceof ModelNotFoundException) {
-            $exc = new NotFoundHttpException($exc->getMessage(), $exc);
+      if (method_exists($exc, 'getStatusCode'))
+      {
+        $status = $exc->getStatusCode();
+        if (view()->exists("errors.{$status}"))
+        {
+          $title = "Error";
+          switch($status)
+          {
+            case '401':
+              $title = "Unauthorized";
+              break;
+            case '403':
+              $title = "Forbidden";
+              break;
+            case '503':
+              $title = "Service Unavailable";
+              break;
+            default:
+              $title = "Error";
+          }
+          return response()->view("errors.{$status}", ['exception' => $exc, 'title' => $title], $status);
+        } else {
+          return $this->convertExceptionToResponse($exc);
         }
+      }
 
-        if ($exc instanceof NotFoundHttpException) {
-            return response()->view('errors.404', array(), 404);
-        }
-
-        return parent::render($request, $exc);
+      return parent::render($request, $exc);
     }
 }
